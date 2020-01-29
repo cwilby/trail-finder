@@ -1,0 +1,56 @@
+version: '3.7'
+
+networks:
+  backend:
+
+volumes:
+  postgres:
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: trail-finder-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: trailfinder
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: trailfinder
+    volumes:
+      - postgres:/var/lib/postgresql/data
+      - .docker/postgres/create-databases.sh:/docker-entrypoint-initdb.d/10-create-databases.sh
+    networks:
+      - backend
+    ports:
+      - 127.0.0.1:5432:5432
+
+  redis:
+    image: 'bitnami/redis:latest'
+    container_name: trail-finder-redis
+    restart: unless-stopped
+    ports:
+      - 127.0.0.1:6379:6379
+    environment:
+      REDIS_PASSWORD: secret
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: trail-finder-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: loci
+      PGADMIN_DEFAULT_PASSWORD: secret1
+    volumes:
+      - ./.docker/pgadmin/pgadmin.json:/pgadmin4/servers.json
+    ports:
+      - 127.0.0.1:5433:80
+    networks:
+      - backend
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: trail-finder-mailhog
+    ports:
+      - 127.0.0.1:1025:1025
+      - 127.0.0.1:8025:8025
+    networks:
+      - backend

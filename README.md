@@ -1,24 +1,14 @@
 # trail-finder
 
-## Project setup
-```
-yarn install
+## Development
+
+```bash
+yarn                        # install dependencies
+yarn up                     # start docker containers
+npx sequelize db:migrate    # run postgres migrations
+yarn start                  # start the app
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+App: http://localhost:3000
+Mailhog: http://localhost:8025
+PGAdmin: http://localhost:5433  (`trailfinder:secret`)

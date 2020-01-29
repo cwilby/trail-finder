@@ -1,0 +1,14 @@
+{
+  "Servers": {
+      "1": {
+          "Name": "Trail Finder RDB",
+          "Group": "Local",
+          "Port": 5432,
+          "Username": "trailfinder",
+          "Password": "secret1",
+          "Host": "postgres",
+          "SSLMode": "prefer",
+          "MaintenanceDB": "trailfinder"
+      }
+  }
+}

@@ -1,0 +1,15 @@
+<mjml>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-image width="300px" src="https://pictshare.lab.cwserve.com/j0r890.png"></mj-image>9
+        <mj-divider border-width="2px" border-color="#226E74"></mj-divider>
+        <mj-text align="center" font-family="helvetica">Hello Adventurer!</mj-text>
+        <mj-text align="center" font-family="helvetica">Click the button below to sign in to your TrailFinder account.</mj-text>
+        <mj-button href="{{link}}" background-color="#226E74">Sign In</mj-button>
+        <mj-divider border-width="2px" border-color="#226E74"></mj-divider>
+        <mj-text font-size="8px" color="lightgrey" align="center" font-family="helvetica">Made with ❤️ in Oregon, USA</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
