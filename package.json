@@ -23,7 +23,7 @@
     "mailgun.js": "^2.0.1",
     "mjml": "^4.5.1",
     "morgan": "^1.9.1",
-    "nodemailer": "^6.4.16",
+    "nodemailer": "^6.6.1",
     "nunjucks": "^3.2.0",
     "paseto": "^1.0.5",
     "pg": "^7.17.1",
