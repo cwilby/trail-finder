@@ -19,7 +19,7 @@
     "bull-board": "^0.6.0",
     "core-js": "^3.4.4",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mailgun.js": "^2.0.1",
     "mjml": "^4.5.1",
     "morgan": "^1.9.1",
